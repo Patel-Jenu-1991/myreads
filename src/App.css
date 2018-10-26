@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Cherry+Swash|Nunito:700');
+
 html, body, .root {
   height: 100%;
 }
@@ -5,15 +7,49 @@ body {
   line-height: 1.5;
 }
 body, .app {
-  background: white;
+  background-color: rgba(255, 255, 255, 0.95);
 }
 
 /* main page */
 
 .list-books-title {
+  background-color: #2e7c31;
+  background-image: -moz-linear-gradient(
+    top,
+    #b4ddb4 0%,
+    #83c783 17%,
+    #52b152 33%,
+    #008a00 67%,
+    #005700 83%,
+    #002400 100%
+  ); /* FF3.6-15 */
+  background-image: -webkit-linear-gradient(
+    top,
+    #b4ddb4 0%,
+    #83c783 17%,
+    #52b152 33%,
+    #008a00 67%,
+    #005700 83%,
+    #002400 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background-image: linear-gradient(
+    to bottom,
+    #b4ddb4 0%,
+    #83c783 17%,
+    #52b152 33%,
+    #008a00 67%,
+    #005700 83%,
+    #002400 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  font-family: 'Cherry Swash', cursive;
+  font-size: 1.65em;
+  letter-spacing: 0.1em;
   padding: 10px 0;
-  background: #2e7c31;
+  position: fixed;
   text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 .list-books-title h1 {
   font-weight: 400;
@@ -28,6 +64,7 @@ body, .app {
 
 .bookshelf {
   padding: 0 10px 20px;
+  margin-top: 7em;
 }
 
 @media (min-width: 600px) {
@@ -37,7 +74,14 @@ body, .app {
 }
 
 .bookshelf-title {
-  border-bottom: 1px solid #dedede;
+  border-bottom: 4px solid rgba(14, 147, 90, 0.84);
+  color: rgba(52, 57, 52, 1);
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.6em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 1.6;
+  text-shadow: 2px 2px 1px rgba(125, 124, 116, 0.75);
 }
 .bookshelf-books {
   text-align: center;
