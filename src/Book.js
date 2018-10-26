@@ -23,7 +23,7 @@ class Book extends Component {
               height: 193,
               backgroundImage: url
             }}></div>
-          <ShelfChanger />
+          <ShelfChanger book={this.props.book} onChangeShelf={this.props.onChangeShelf}/>
         </div>
         <div className='book-title'>{this.props.book.title}</div>
         <div className='book-authors'>{authors}</div>
