@@ -12,8 +12,9 @@ basic functionality required by the project rubric.
 ## TL;DR
 ---
 To get started developing right away:
-* Download the project zip or clone the repository
-* install all project dependencies with `npm install`
+* You'll need to have [NodeJS](https://nodejs.org/en/) installed
+* Download the project [Zip](https://github.com/Patel-Jenu-1991/myreads/archive/master.zip) or clone the [Repository](https://github.com/Patel-Jenu-1991/myreads.git)
+* CD into the project directory and install all project dependencies with `npm install`
 * start the development server with `npm start`
 
 ## App Structure
