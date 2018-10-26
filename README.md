@@ -1,17 +1,23 @@
 # MyReads Project
+---
+This is the completed version of MyReads app with a little extra styling besides the
+basic functionality required by the project rubric.
 
-This is the starter template for the final assessment project for Udacity's React Fundamentals course. The goal of this template is to save you time by providing a static example of the CSS and HTML markup that may be used, but without any of the React code that is needed to complete the project. If you choose to start with this template, your job will be to add interactivity to the app by refactoring the static code in this template.
-
-Of course, you are free to start this project from scratch if you wish! Just be sure to use [Create React App](https://github.com/facebookincubator/create-react-app) to bootstrap the project.
+# Core App Functionality
+---
+* Main screen showing book shelves under the categories of "Currently Reading", "Want to Read", and "Read"
+* A Search Page to find new books which can be accessed by clicking the plus sign on the bottom right of the main screen
+* A Drop Down Menu control on each individual book on both the main screen and the search screen to allow for shelving a book on a particular book shelf
 
 ## TL;DR
-
+---
 To get started developing right away:
-
+* Download the project zip or clone the repository
 * install all project dependencies with `npm install`
 * start the development server with `npm start`
 
-## What You're Getting
+## App Structure
+---
 ```bash
 ├── CONTRIBUTING.md
 ├── README.md - This file.
@@ -30,63 +36,31 @@ To get started developing right away:
     │   ├── arrow-back.svg
     │   └── arrow-drop-down.svg
     ├── index.css # Global styles. You probably won't need to change anything here.
-    └── index.js # You should not need to modify this file. It is used for DOM rendering only.
+    ├── index.js # You should not need to modify this file. It is used for DOM rendering only.
+    ├── Book.js # The book component for display on the main and search screens.
+    ├── BookCase.js # A component to display multiple BookShelf components.
+    ├── BookShelf.js # A component to display a set of books.
+    ├── ShelfChanger.js # A component for shelving a book on a particular shelf.
+    ├── Search.js # A component to display the search bar and results.
+    └── SortBooks.js # A module containing functions for sorting and combining book data.
 ```
-
-Remember that good React design practice is to create new JS files for each component and use import/require statements to include them where they are needed.
-
-## Backend Server
-
-To simplify your development process, we've provided a backend server for you to develop against. The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods you will need to perform necessary operations on the backend:
-
-* [`getAll`](#getall)
-* [`update`](#update)
-* [`search`](#search)
-
-### `getAll`
-
-Method Signature:
-
-```js
-getAll()
-```
-
-* Returns a Promise which resolves to a JSON object containing a collection of book objects.
-* This collection represents the books currently in the bookshelves in your app.
-
-### `update`
-
-Method Signature:
-
-```js
-update(book, shelf)
-```
-
-* book: `<Object>` containing at minimum an `id` attribute
-* shelf: `<String>` contains one of ["wantToRead", "currentlyReading", "read"]  
-* Returns a Promise which resolves to a JSON object containing the response data of the POST request
-
-### `search`
-
-Method Signature:
-
-```js
-search(query)
-```
-
-* query: `<String>`
-* Returns a Promise which resolves to a JSON object containing a collection of a maximum of 20 book objects.
-* These books do not know which shelf they are on. They are raw results only. You'll need to make sure that books have the correct state while on the search page.
-
-## Important
-The backend API uses a fixed set of cached search results and is limited to a particular set of search terms, which can be found in [SEARCH_TERMS.md](SEARCH_TERMS.md). That list of terms are the _only_ terms that will work with the backend, so don't be surprised if your searches for Basket Weaving or Bubble Wrap don't come back with any results.
-
+---
 ## Create React App
+---
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). You can find more information on how to perform common tasks [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
-## Contributing
+---
+## Credits
+---
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+* Instructors at Udacity
+* Reviewers at Udacity
+* Classmates from the GwG FEND Nanodegree Program
 
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+---
+## References
+---
+
+MDN | REACT DOCS | CLASSROOM LECTURES | STACK OVERFLOW | COLORZILLA
+---
