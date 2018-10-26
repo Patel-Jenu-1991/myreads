@@ -17,3 +17,19 @@ export const sortAllBooks = (list) => {
 
   return booksList;
 };
+
+export const mergeShelfAndSearch = (shelf, search) => {
+  // Check if the book already exists in shelf data
+  // for each book in the search results
+  const dir = {};
+
+  for (const book of shelf) {
+    dir[book.id] = book.shelf;
+  }
+
+  for (const book of search) {
+    book.shelf = dir[book.id] || 'none';
+  }
+
+  return search;
+};
